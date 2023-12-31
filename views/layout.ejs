@@ -7,6 +7,401 @@
     </title>
 
 
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=B612+Mono&family=Roboto+Slab&display=swap');
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: url("bg2.jpg");
+            width: 100vw;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .outer-div {
+            margin: 2%;
+            padding: 2%;
+            background-color: rgba(109, 109, 109, 0.055);
+            backdrop-filter: blur(5px) saturate(180%);
+            width: 70%;
+            height: 50%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 25px;
+            box-shadow: 0px 10px 15px -3px rgb(0, 0, 0);
+        }
+
+        .outer-div-2 {
+            margin: 2%;
+            padding: 2%;
+            background-color: rgba(109, 109, 109, 0.055);
+            backdrop-filter: blur(5px) saturate(180%);
+            width: 70%;
+            height: 70%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 25px;
+            box-shadow: 0px 10px 15px -3px rgb(0, 0, 0);
+        }
+
+        .add-emp-div {
+            margin: 2%;
+            padding: 2%;
+            background-color: rgba(109, 109, 109, 0.055);
+            backdrop-filter: blur(5px) saturate(180%);
+            width: 40%;
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 25px;
+            box-shadow: 0px 10px 15px -3px rgb(0, 0, 0);
+        }
+
+        .main-container {
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 90vh;
+            width: 90vw;
+        }
+
+
+        .comp-header {
+            padding: 30px;
+            width: 60%;
+            height: 99%;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            justify-content: center;
+            color: #000;
+            text-shadow: 2px 2px 5px rgb(15, 11, 39);
+        }
+
+        .comp-header h2 {
+            font-size: 50px;
+            color: rgb(0, 0, 0);
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .comp-header span {
+            color: rgb(156, 18, 18);
+        }
+
+        .sign-in {
+            padding: 2% 2%;
+            background: #69323200;
+            backdrop-filter: blur(15px) saturate(100%);
+            border-radius: 25px;
+            box-shadow: 0px 10px 15px -3px rgb(0, 0, 0);
+        }
+
+        .sign-up {
+            border-radius: 25px;
+            border: 0px;
+            padding: 2%;
+        }
+
+        #signupmodal {
+            border: none;
+            outline: none;
+            background-color: #00000033;
+            backdrop-filter: blur(16px);
+        }
+
+        #signupmodal-dialog {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 90vh;
+            width: 30%;
+        }
+
+        #signupmodal-content {
+            padding: 2% 2%;
+            background: #69323200;
+            backdrop-filter: blur(50px) saturate(180%);
+            color: azure;
+            width: 70%;
+        }
+
+        .sign-in .main_head {
+            width: 100%;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0%;
+            margin: 0%;
+
+        }
+
+        input {
+            background: transparent;
+            width: 100%;
+            border: none;
+            padding: 0px;
+            margin: 2%;
+            outline: none;
+        }
+
+        input:focus {
+            background: transparent;
+            border: none;
+        }
+
+        .main-container .sign-in .sign_up {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main-container .sign-in .sign_up h5 {
+            margin-right: 10px;
+            margin-bottom: 0;
+        }
+
+        .main-container .sign-in .form {
+            width: 100%;
+        }
+
+        .main-container .sign-in .form input {
+            width: 100%;
+            padding: 6px;
+            line-height: 1;
+        }
+
+        .separator--vertical {
+            border-left: 1px solid #000000f6;
+            width: 1px;
+            height: 99%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        .sign_head {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .hova:hover {
+            cursor: pointer;
+            color: rgb(0, 0, 0);
+        }
+
+
+        .add-emp-form {
+            margin: 0%;
+            padding: 5%;
+            background-color: rgba(24, 24, 24, 0.863);
+            border-radius: 15px;
+            color: azure;
+
+        }
+
+        .form-control {
+            padding: 1% 5% 1% 1%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            background-color: rgba(232, 189, 243, 0.13);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(50px);
+            color: whitesmoke;
+        }
+
+        .nav-container {
+            width: 95%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn-div {
+            align-items: center;
+        }
+
+        .navbar-brand a,
+        .navbar-brand a:visited {
+            color: whitesmoke;
+        }
+
+        .card-name,
+        .card-role {
+            text-transform: capitalize;
+        }
+
+        button,
+        button:focus {
+            outline: none;
+            border: 0px;
+        }
+
+        .dash-container {
+            margin: 1% auto;
+            display: flex;
+            align-items: top;
+            justify-content: center;
+            height: 90vh;
+            width: 90vw;
+        }
+
+
+        .dash-div {
+            margin: 2%;
+            padding: 1%;
+            background-color: rgba(238, 21, 21, 0.055);
+            backdrop-filter: blur(5px) saturate(180%);
+            width: 80%;
+            height: fit-content;
+            max-height: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 25px;
+            box-shadow: 0px 10px 15px -3px rgb(0, 0, 0);
+            overflow: scroll;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2%;
+
+        }
+
+        #emp-card {
+            background-color: rgba(24, 24, 24, 0.8);
+            border-radius: 15px;
+            color: azure;
+        }
+
+
+        .assignmodal {
+            background-color: rgba(255, 255, 255, 0.089);
+            backdrop-filter: blur(10px) saturate(100%);
+            color: black;
+        }
+
+        .modal-backdrop {
+            z-index: -1;
+        }
+
+        .emp-cont {
+            display: flex;
+            width: 90%;
+            justify-content: space-around;
+            border-radius: 20px;
+            background-color: rgba(255, 255, 255, 0.089);
+            backdrop-filter: blur(5px) saturate(100%);
+            color: black;
+        }
+
+
+        .emp-left,
+        .emp-right {
+            height: 99%;
+            width: 48%;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            padding: 2%;
+        }
+
+        .emp-deet {
+            background-color: rgba(0, 0, 0, 0.26);
+            backdrop-filter: blur(15px);
+            width: 80%;
+            border-radius: 25px;
+        }
+
+        .rev-edit {
+            background-color: rgba(0, 0, 0, 0.26);
+            overflow: scroll;
+            backdrop-filter: blur(15px);
+            width: 80%;
+            height: fit-content;
+            max-height: 90%;
+            border-radius: 25px;
+            padding: 5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .emp-form {
+            display: flex;
+            color: aliceblue;
+            background-color: rgba(0, 0, 0, 0.466);
+            width: 70%;
+            margin: 5% auto;
+            justify-content: center;
+            align-items: center;
+            border-radius: 25px;
+        }
+
+        .editform {
+            width: 90%;
+            height: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 5% 0;
+        }
+
+        .edit-form-control {
+            border: none;
+            color: aliceblue;
+            background: transparent;
+        }
+
+        .edit-form-input {
+            background: yellow;
+        }
+
+        #edit-card {
+            background-color: rgba(24, 24, 24, 0.8);
+            border-radius: 15px;
+            color: azure;
+        }
+
+        .rounded {
+            width: 90%;
+        }
+    </style>
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
 
@@ -18,9 +413,6 @@
     <script src="https://kit.fontawesome.com/a8162db7fd.js" crossorigin="anonymous"></script>
 
 
-    <link rel="stylesheet" href="/assets/signin.css">
-    <link rel="stylesheet" href="/assets/admin_dashboard.css">
-    <link rel="stylesheet" href="/assets/layout.css">
     <%- style %>
 
 </head>

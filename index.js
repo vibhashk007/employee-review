@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(cookieParser());
 
-app.use(express.static("./assets"));
+app.use(express.static("assets"));
 app.use(expressLayouts);
 
 // extract style and script from sub pages into the layout
@@ -67,4 +67,6 @@ app.listen(PORT || 5000, (err) => {
     console.log(`Error is running the server: ${err}`);
   }
   console.log(`server is running on port: ${PORT}`);
+  console.log(__dirname);
+  console.log(path.join(__dirname, "assets"));
 });
