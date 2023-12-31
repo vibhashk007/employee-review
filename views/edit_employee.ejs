@@ -1,0 +1,91 @@
+<% if (locals.user) {%>
+    <div class="dash-container">
+        <div class="emp-cont">
+            <div class="emp-left">
+                <h2 class="text-center">Employee details</h2>
+                <div class="emp-deet">
+                    <div class="emp-form">
+                        <form class="editform" action="/update-employee/<%= employee._id %>" method="POST">
+                            <h5>Edit User Details</h5>
+
+                            <!-- Name input -->
+                            <div class="form-control edit-form-control my-1">
+                                <label class="form-label" for="username">Name:</label>
+                                <input type="text" id="name" name="username" class="form-control"
+                                    value="<%= employee.username %>" required />
+                            </div>
+                            <div class="form-control edit-form-control my-1">
+                                <label class="form-label" for="email">Email address:</label>
+                                <input type="email" id="email" name="email" class="form-control"
+                                    value="<%= employee.email %>" readonly required />
+                            </div>
+                            <div class="form-control edit-form-control my-1">
+                                <h6 class="fw-semibold">Current role: <span style="text-transform: capitalize;">
+                                        <%= employee.role %>
+                                    </span> </h6>
+                            </div>
+
+                            <div class="form-control edit-form-control my-1">
+                                <label class="form-label" for="role">Select Role</label>
+                                <select class="form-select" id="role" name="role" aria-label="Default select example"
+                                    required>
+                                    <option selected value="employee">Employee</option>
+                                    <option value="admin">Admin</option>
+                                </select>
+                            </div>
+
+                            <div class="login-btn my-3">
+                                <!-- Login button -->
+                                <button type="submit" class="btn btn-success">Confirm</button>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+            <div class="separator--vertical"></div>
+            <div class="emp-right">
+                <h2 class="text-center">Feedbacks Recieved</h2>
+                <div class="rev-edit">
+                    <% for(review of reviewsFromOthers) {%>
+                        <div class="card shadow m-2" style="width: 19rem" id="edit-card">
+                            <form action="/review/update-review/<%= review._id%>" method="POST" class="rounded">
+                                <div class="card-body justify-content-md-center">
+                                    <h5 class="card-name">From : <%= review.reviewer.username %>
+                                    </h5>
+                                    <h6 class="card-email">Email : <%= review.reviewer.email %>
+                                    </h6>
+                                    <p class="card-role">Role : <%= review.reviewer.role %>
+                                    </p>
+                                    <label for="feedback" class="form-label">Feedback</label>
+                                    <textarea class="form-control " id="feedback-form" name="feedback"
+                                        rows="3"><%=review.review %></textarea>
+
+                                    <div class="d-flex flex-wrap justify-content-between">
+                                        <button class="btn btn-primary mb-1 my-1" style="width: 100%"
+                                            type="submit">Update</button>
+
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+
+                        <%} %>
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </div>
+    </div>
+
+    </div>
+
+
+
+
+    <%} %>

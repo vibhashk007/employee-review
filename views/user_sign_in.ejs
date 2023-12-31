@@ -1,0 +1,103 @@
+<div class="main-container">
+    <div class="outer-div">
+        <div class="comp-header">
+            <h2>
+                Welcome to <span>E</span>-Corp<span>!</span>
+            </h2>
+            <h4>
+                Please Log-in/Sign-up
+            </h4>
+        </div>
+        <div class="separator--vertical"></div>
+        <div class="sign-in">
+            <div class="main_head">
+                <h3 class="heading">Login</h3>
+            </div>
+            <hr>
+            <form method="POST" action="/create-session">
+
+                <!-- Email input -->
+                <div class="form-control my-3">
+                    <input type="email" id="email" name="email" class="login-form-input" placeholder="Enter email" />
+                </div>
+
+                <!-- Password input -->
+                <div class="form-control my-3">
+                    <input type="password" id="password" name="password" class="login-form-input"
+                        placeholder="Password" />
+                </div>
+
+                <div class="login-btn">
+                    <!-- Login button -->
+                    <button type="submit" class="btn btn-success">LOGIN</button>
+                </div>
+
+            </form>
+            <hr>
+
+            <div class="sign_up">
+                <h5>Don't have an Account?
+                    <span class="hova" data-bs-toggle="modal" data-bs-target="#signupmodal">Sign Up</span>
+                </h5>
+            </div>
+            <!-- Link to redirect to signup page -->
+
+        </div>
+
+    </div>
+
+</div>
+<div class="modal fade" id="signupmodal" tabindex="-1" aria-labelledby="signupmodal" aria-hidden="true">
+    <div class="modal-dialog" id="signupmodal-dialog">
+        <div class="modal-content" id="signupmodal-content">
+            <div class="sign-up">
+                <div class="sign_head">
+                    <h3 class="heading">Sign-Up</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <hr>
+                <form action="/create" method="POST">
+                    <div class="form-control my-3">
+                        <input type="text" id="name" name="username" class="login-form-input"
+                            placeholder="Enter User name" required />
+                    </div>
+
+                    <!-- Email input -->
+                    <div class="form-control my-3">
+                        <input type="email" id="email" name="email" class="login-form-input"
+                            placeholder="Enter your email" required />
+                    </div>
+
+                    <!-- Password input -->
+                    <div class="form-control my-3">
+                        <input type="password" id="password" name="password" class="login-form-input"
+                            placeholder="Password" required />
+                    </div>
+
+                    <!-- Confirm password input -->
+                    <div class="form-control my-3">
+                        <input type="password" id="confirm_password" name="confirm_password" class="login-form-input"
+                            placeholder="Confirm Password" required />
+                    </div>
+
+
+                    <div class="signup-btn">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-success">Sign Up</button>
+                    </div>
+
+
+                </form>
+                <hr>
+                <div class="sign_up">
+                    <h5>Already have an Account?
+                        <span class="hova" data-bs-dismiss="modal">Log In</span>
+                    </h5>
+                </div>
+
+                <!-- Link to redirect to signup page -->
+
+            </div>
+        </div>
+    </div>
+</div>
