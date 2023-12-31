@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(cookieParser());
 
-app.use(express.static("assets"));
+app.use(express.static("./assets"));
 app.use(expressLayouts);
 
 // extract style and script from sub pages into the layout
