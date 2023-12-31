@@ -131,3 +131,138 @@
 }
 
 
+.dash-container{    
+    margin: 1% auto;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    height: 90vh;
+    width: 90vw;
+  }
+  
+  
+  .dash-div{
+      margin: 2%;
+      padding: 1%;
+      background-color: rgba(238, 21, 21, 0.055);
+      backdrop-filter: blur(5px) saturate(180%);
+      width: 80%;
+      height: fit-content;
+      max-height: 70%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 25px;
+      box-shadow: 0px 10px 15px -3px rgb(0, 0, 0);
+      overflow: scroll;
+  }
+  
+  .card-container{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2%;
+  
+  }
+  
+  #emp-card {
+    background-color: rgba(24, 24, 24, 0.8);
+    border-radius: 15px;
+    color: azure;
+  }
+  
+  
+  .assignmodal{
+      background-color: rgba(255, 255, 255, 0.089);    
+      backdrop-filter: blur(10px) saturate(100%);
+      color: black;
+  }
+  
+  .modal-backdrop {
+      z-index: -1;
+  }
+  
+  .emp-cont{
+      display: flex;
+      width: 90%;
+      justify-content: space-around;
+      border-radius: 20px;
+      background-color: rgba(255, 255, 255, 0.089);    
+      backdrop-filter: blur(5px) saturate(100%);
+      color: black;
+  }
+  
+  
+  .emp-left,
+  .emp-right{
+      height: 99%;
+      width: 48%;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+      padding: 2%;
+  }
+  
+  .emp-deet{
+      background-color: rgba(0, 0, 0, 0.26);
+      backdrop-filter: blur(15px) ;
+      width: 80%;
+      border-radius: 25px;
+  }
+  .rev-edit{
+      background-color: rgba(0, 0, 0, 0.26);
+      overflow: scroll;
+      backdrop-filter: blur(15px) ;
+      width: 80%;
+      height: fit-content;
+      max-height: 90%;
+      border-radius: 25px;
+      padding: 5%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .emp-form{
+      display: flex;
+      color: aliceblue;
+      background-color: rgba(0, 0, 0, 0.466);
+      width: 70%;
+      margin: 5% auto;
+      justify-content: center;
+      align-items: center;
+      border-radius: 25px;
+  }
+  
+  .editform{
+      width: 90%;
+      height: 90%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 5% 0;
+  }
+  
+  .edit-form-control{
+      border: none;
+      color: aliceblue;
+      background:transparent;
+  }
+  
+  .edit-form-input{
+      background: yellow;
+  }
+  
+  #edit-card{
+      background-color: rgba(24, 24, 24, 0.8);
+    border-radius: 15px;
+    color: azure;
+  }
+  .rounded{
+      width: 90%;
+  }
+  
+  
+  
+
